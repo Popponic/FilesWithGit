@@ -1,0 +1,40 @@
+
+[Jacket No. 1]
+
+Brand: Redd
+Material: Leather
+Color: Red
+Size: M
+Price: $9.99
+
+[Jacket No. 2]
+
+Brand: Bluee
+Material: Leather
+Color: Blue
+Size: L
+Price: $19.99
+
+[Jacket No. 3]
+
+Brand: Greene
+Material: Leather
+Color: Green
+Size: XL
+Price: $29.99
+
+[Jacket No. 4]
+
+Brand: Yellowe
+Material: Leather
+Color: Yellow
+Size: XS
+Price: $39.99
+
+[Jacket No. 5]
+
+Brand: Blacke
+Material: Leather
+Color: Black
+Size: XL
+Price: $49.99
