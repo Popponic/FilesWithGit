@@ -48,6 +48,7 @@ int main()
     struct Jackets* p_jacket; // Structure Pointer
     p_jacket = jacket; // Assigning Pointer to Array
     fstream outfile; // Output file identifier
+    ifstream infile;
     
     // Heading
     cout << "FilesWithGit - Jacket System" << endl;
@@ -73,6 +74,48 @@ int main()
     outfile.close(); // Closing File
 
     // ] Member 2
+
+    // Member 1 [
+
+    infile.open("jacket.txt", ios::in); // Opening file for input.
+    string str; // String to assign with getline
+    while (getline(infile, str)) { // File input loop
+        cout << str << endl;
+    }
+
+    string insize; // Size search input
+    cout << "\nSearch by Size: ";
+    cin >> insize;
+    
+    bool resultsFound = false; // Results Found checker
+    int results = 0; // Counter for amount of results found
+
+    // Loop for searching the data.
+    for (int i = 0; i < 5; i++) {
+        cout << "\nSearching..." << endl;
+        if (insize == (p_jacket + i)->size) {
+            cout << "\nFound!: " << endl;
+            cout << "\n[Jacket No. " << i + 1 << "]\n" << endl;
+            cout << "Brand: " << (p_jacket + i)->brand << endl;
+            cout << "Material: " << (p_jacket + i)->material << endl;
+            cout << "Color: " << (p_jacket + i)->color << endl;
+            cout << "Size: " << (p_jacket + i)->size << endl;
+            cout << "Price: $" << (p_jacket + i)->price << endl;
+            resultsFound = true;
+            results = results + 1;
+        }
+    }
+    // Conditional to check if any results were found in the search and to print out a different closing text based on the result.
+    if (resultsFound == true) {
+        cout << "\nFound " << results << " results!" << endl;
+    }
+    else {
+        cout << "\nNo results were found!" << endl;
+    }
+
+    infile.close(); // Closing File
+
+    // ] Member 1
 
     return 0;
 
